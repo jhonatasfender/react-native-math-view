@@ -1,4 +1,5 @@
-import { AllPackages } from 'mathjax-full/js/input/tex/AllPackages';
+// @ts-ignore
+import { AllPackages } from "mathjax-full/js/input/tex/AllPackages";
 
 export type ResizeMode = 'center' | 'cover' | 'contain' | 'stretch';
 

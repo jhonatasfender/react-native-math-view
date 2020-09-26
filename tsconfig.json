@@ -5,13 +5,22 @@
     "noImplicitAny": true,
     "module": "es6",
     "target": "es5",
-    "lib": [ "es2015", "dom" ],
+    "lib": [
+      "es2015",
+      "dom"
+    ],
     "jsx": "react",
     "baseUrl": ".",
     "noEmitOnError": false,
-    "declaration": true
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true
   },
-  "include": [ "src" ],
-  "exclude": ["node_modules"],
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
   "compileOnSave": true
 }

@@ -1,8 +1,13 @@
 import * as _ from 'lodash';
+// @ts-ignore
 import { liteAdaptor } from 'mathjax-full/js/adaptors/liteAdaptor';
+// @ts-ignore
 import { RegisterHTMLHandler } from 'mathjax-full/js/handlers/html';
+// @ts-ignore
 import { TeX } from 'mathjax-full/js/input/tex';
+// @ts-ignore
 import { mathjax } from 'mathjax-full/js/mathjax';
+// @ts-ignore
 import { SVG } from 'mathjax-full/js/output/svg';
 import { MathToSVGConfig, mathToSVGDefaultConfig } from './Config';
 

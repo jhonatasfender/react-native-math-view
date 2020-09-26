@@ -10,7 +10,10 @@ import { mathToSVG } from '../MathProvider';
 const nativeViewName = 'RNSVGMathView';
 const RNMathView = requireNativeComponent(nativeViewName);
 const MathViewManager = NativeModules.RNMathViewManager || {};
+// @ts-ignore
 export const { Constants } = UIManager.getViewManagerConfig ? UIManager.getViewManagerConfig(nativeViewName) : UIManager[nativeViewName];
+// @ts-ignore
+console.log(UIManager[nativeViewName])
 
 export interface MathViewProps extends ViewProps {
     math: string,
@@ -101,6 +104,7 @@ function MathView(props: MathViewProps, ref: any) {
         resizeMode: props.resizeMode,
         padding: _.get(fStyle, 'padding', undefined)
     });
+    // @ts-ignore
     const style = useCalculatedStyle(data, config);
 
     return (
@@ -129,6 +133,7 @@ const styles = StyleSheet.create({
     }
 })
 
+// @ts-ignore
 const MathViewWrapper = forwardRef(MathView);
 
 MathViewWrapper.defaultProps = MathView.defaultProps = {
@@ -136,8 +141,9 @@ MathViewWrapper.defaultProps = MathView.defaultProps = {
     scaleToFit: false,
     config: {}
 } as MathViewProps;
-
+// @ts-ignore
 MathViewWrapper.Constants = Constants;
+// @ts-ignore
 MathViewWrapper.getPreserveAspectRatio = (alignment: string, scale: string) => `${alignment} ${scale}`;
 
 export default MathViewWrapper;
